@@ -1,16 +1,17 @@
-import express from 'express';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+const express = require("express");
+const path = require("path");
 
 const app = express();
-const __filename = fileURLToPath(import.meta.url);
-const __path = dirname(__filename);
-const PORT = process.env.PORT || 3877;
+const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.sendFile(__path + '/main.html');
+// ملفات الموقع
+app.use(express.static(path.join(__dirname, "public")));
+
+// الصفحة الرئيسية
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 app.listen(PORT, () => {
-  console.log(`الموقع يعمل على المنفذ ${PORT}`);
+  console.log("Server running on port " + PORT);
 });
