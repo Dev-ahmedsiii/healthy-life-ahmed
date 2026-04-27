@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>نظام غذائي ذكي</title>
+<title>نظام غذائي </title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header><h1>🤖 نظام غذائي ذكي</h1></header>
+<header>
+<h1>نظام غذائي </h1>
+</header>
 
 <nav>
 <a href="home.html">الرئيسية</a>
@@ -21,28 +23,24 @@
 <div class="container">
 
 <div class="card">
-<h2>📥 أدخل بياناتك</h2>
-<input id="weight" placeholder="وزنك (كجم)">
+<h2>أدخل وزنك</h2>
+<input id="weight" type="number" placeholder="مثال: 70">
 <button onclick="generatePlan()">إنشاء النظام</button>
 </div>
 
 <div class="card">
-<h2>🥗 نظامك الخاص</h2>
-<p id="planResult"></p>
+<h2>🥗 نظامك الغذائي</h2>
+<pre id="planResult">سيظهر هنا النظام...</pre>
 </div>
 
 <div class="card">
 <h2>📊 تتبع وزنك</h2>
-<input id="newWeight" placeholder="وزنك اليوم">
-<button onclick="saveWeight()">حفظ</button>
+<input id="newWeight" type="number" placeholder="وزنك اليوم">
+<button onclick="saveWeight()">حفظ الوزن</button>
 <p id="progress"></p>
 </div>
 
 </div>
-
-<footer class="footer">
-المطور: أحمد محمد🦇 971543496968+
-</footer>
 
 <script src="script.js"></script>
 </body>
