@@ -3,30 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الجدول</title>
+<title>نظام غذائي ذكي</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header><h1>📅 جدول غذائي</h1></header>
+<header><h1>🤖 نظام غذائي ذكي</h1></header>
 
 <nav>
 <a href="home.html">الرئيسية</a>
 <a href="calculator.html">الحاسبة</a>
-<a href="plan.html">الجدول</a>
+<a href="plan.html">النظام</a>
 <a href="tips.html">نصائح</a>
 </nav>
 
 <div class="container">
-<div class="card">السبت: دجاج + أرز</div>
-<div class="card">الأحد: سمك</div>
-<div class="card">الاثنين: لحم</div>
-<div class="card">الثلاثاء: تونة</div>
-<div class="card">الأربعاء: دجاج</div>
-<div class="card">الخميس: شوربة</div>
-<div class="card">الجمعة: وجبة حرة</div>
+
+<div class="card">
+<h2>📥 أدخل بياناتك</h2>
+<input id="weight" placeholder="وزنك (كجم)">
+<button onclick="generatePlan()">إنشاء النظام</button>
 </div>
 
+<div class="card">
+<h2>🥗 نظامك الخاص</h2>
+<p id="planResult"></p>
+</div>
+
+<div class="card">
+<h2>📊 تتبع وزنك</h2>
+<input id="newWeight" placeholder="وزنك اليوم">
+<button onclick="saveWeight()">حفظ</button>
+<p id="progress"></p>
+</div>
+
+</div>
+
+<footer class="footer">
+المطور: أحمد محمد🦇 971543496968+
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
