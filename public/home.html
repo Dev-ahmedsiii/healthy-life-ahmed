@@ -9,9 +9,7 @@
 
 <body>
 
-<header>
-<h1>🥗 الغذاء الصحي الذكي</h1>
-</header>
+<header><h1>🥗 الغذاء الصحي الذكي</h1></header>
 
 <nav>
 <a href="home.html">الرئيسية</a>
@@ -23,25 +21,26 @@
 <div class="container">
 
 <div class="card">
-<h2>💡 ما هو الغذاء الصحي؟</h2>
-<p>هو نظام يعتمد على أكل طبيعي متوازن لتحسين الصحة والطاقة.</p>
+<h2>💡 نصيحة اليوم</h2>
+<p id="daily"></p>
 </div>
 
 <div class="card">
-<h2>🔥 فوائده</h2>
-<ul>
-<li>طاقة أعلى</li>
-<li>مناعة قوية</li>
-<li>جسم صحي</li>
-</ul>
+<h2>⭐ قيّم الموقع</h2>
+<button onclick="rate(1)">⭐</button>
+<button onclick="rate(2)">⭐⭐</button>
+<button onclick="rate(3)">⭐⭐⭐</button>
+<button onclick="rate(4)">⭐⭐⭐⭐</button>
+<button onclick="rate(5)">⭐⭐⭐⭐⭐</button>
+<p id="rate-msg"></p>
 </div>
 
 </div>
 
 <footer class="footer">
-المطور: أحمد محمد عبد الرحمن 📞 971543496968+<br>
-© 2026
+المطور: أحمد محمد عبد الرحمن 📞 971543496968+
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
