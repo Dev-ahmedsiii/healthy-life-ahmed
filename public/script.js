@@ -4,69 +4,30 @@ let h=document.getElementById("h").value;
 let a=document.getElementById("a").value;
 
 let c=10*w+6.25*h-5*a+5;
-document.getElementById("r").innerText="🔥 احتياجك اليومي: "+Math.round(c)+" سعرة";
+document.getElementById("r").innerText="🔥 "+Math.round(c);
 }
 
-// 📊 BMI
 function calcBMI(){
 let w=document.getElementById("w").value;
 let h=document.getElementById("h").value/100;
-
 let bmi=w/(h*h);
-let msg="";
-
-if(bmi<18.5) msg="نحيف";
-else if(bmi<25) msg="طبيعي";
-else msg="زيادة وزن";
-
-document.getElementById("bmi").innerText="📊 BMI: "+bmi.toFixed(1)+" ("+msg+")";
+document.getElementById("bmi").innerText="BMI: "+bmi.toFixed(1);
 }
 
-// 🤖 AI مطور
 function aiAdvice(){
 let w=document.getElementById("w").value;
-let h=document.getElementById("h").value/100;
-
-if(!w||!h){
-document.getElementById("ai").innerText="أدخل البيانات أولاً";
-return;
+if(w<60) document.getElementById("ai").innerText="زد الأكل";
+else if(w<80) document.getElementById("ai").innerText="ممتاز";
+else document.getElementById("ai").innerText="قلل الدهون";
 }
 
-let bmi=w/(h*h);
-let msg="";
-
-if(bmi<18.5){
-msg="🟡 جسمك يحتاج سعرات أعلى + بروتين + تمارين مقاومة";
-}
-else if(bmi<25){
-msg="🟢 ممتاز 👌 حافظ على نظامك الحالي";
-}
-else{
-msg="🔴 قلل السكر والدهون + مارس رياضة يومية";
+function rate(s){
+localStorage.setItem("rate",s);
+document.getElementById("rate-msg").innerText="شكراً ⭐";
 }
 
-document.getElementById("ai").innerText=msg;
-}
-
-// ⭐ تقييم
-function rate(star){
-localStorage.setItem("rating",star);
-document.getElementById("rate-msg").innerText="شكراً لتقييمك ⭐";
-}
-
-// 💡 نصيحة يومية
 function dailyTip(){
-let tips=[
-"اشرب ماء كثير 💧",
-"ابدأ يومك بفطور صحي 🍳",
-"مارس المشي يومياً 🚶",
-"قلل السكر 🍭",
-"نم جيداً 😴",
-"كل خضار أكثر 🥗"
-];
-
-let random=tips[Math.floor(Math.random()*tips.length)];
-document.getElementById("daily").innerText=random;
+let tips=["اشرب ماء","كل خضار","مارس الرياضة","نم جيداً"];
+document.getElementById("daily").innerText=tips[Math.floor(Math.random()*tips.length)];
 }
-
 window.onload=dailyTip;
