@@ -1,4 +1,4 @@
-// 🔥 حساب السعرات
+
 function calcCalories(){
 let w=document.getElementById("w")?.value;
 let h=document.getElementById("h")?.value;
