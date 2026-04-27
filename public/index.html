@@ -2,50 +2,57 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>الغذاء الصحي</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دليل الغذاء الصحي</title>
+
+<style>
+body{
+margin:0;
+font-family:"Cairo",sans-serif;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+img{
+width:90%;
+max-width:420px;
+border-radius:20px;
+margin-top:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+.btn{
+display:block;
+margin:15px auto;
+padding:15px;
+width:80%;
+max-width:300px;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+}
+
+.enter{background:#22c55e;color:white}
+.dev{background:#3b82f6;color:white}
+</style>
 </head>
+
 <body>
 
-<header>
 <h1>🥗 دليل الغذاء الصحي</h1>
-<button onclick="toggleDark()">🌙 وضع ليلي</button>
-</header>
+<p>ابدأ رحلتك نحو حياة صحية</p>
 
-<nav>
-<a href="/">الرئيسية</a>
-<a href="calculator.html">الحاسبة</a>
-<a href="plan.html">الجدول</a>
-<a href="tips.html">نصائح</a>
-</nav>
+<img src="https://www.image2url.com/r2/default/images/1777291617793-a3e2d1c0-a804-4c30-a40a-f341031ca276.jpeg">
 
-<div class="container">
+<button class="btn enter" onclick="location.href='home.html'">
+🚀 دخول الموقع
+</button>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061">
-<h2>فطور صحي</h2>
-<p>ابدأ يومك بطاقة عالية</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
-<h2>غداء متوازن</h2>
-<p>بروتين + خضار + كربوهيدرات</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
-<h2>عشاء خفيف</h2>
-<p>وجبة خفيفة قبل النوم</p>
-</div>
-
-</div>
-
-<div class="footer">
-<span class="dev">المطور: أحمد محمد عبد الرحمن</span><br>
-رقم التواصل: 971543496968+
-<br>© 2026 جميع الحقوق محفوظة
-</div>
+<button class="btn dev" onclick="alert('👨‍💻 المطور: أحمد محمد عبد الرحمن 📞 971543496968+')">
+👨‍💻 المطور
+</button>
 
 </body>
 </html>
